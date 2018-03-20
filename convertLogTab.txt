@@ -1,0 +1,4 @@
+#!/bin/bash
+rm logTab2.txt
+sed  '$ ! {s|$|, |g}' logTab.txt >> logTab2.txt
+
