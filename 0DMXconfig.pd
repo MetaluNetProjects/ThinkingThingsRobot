@@ -1,6 +1,6 @@
-#N canvas 76 344 520 456 10;
+#N canvas 173 379 520 456 10;
+#X declare -path Fraise;
 #X declare -stdpath Fraise;
-#X obj 357 13 declare -stdpath Fraise;
 #X obj 20 13 pied/pied 0 12346;
 #N canvas 625 81 752 410 Fraise 0;
 #X obj 30 29 fruit/receive TTR1;
@@ -134,7 +134,7 @@
 #X obj 30 50 route 10 12;
 #X obj 30 91 s channels;
 #X obj 61 72 s values;
-#X obj 277 164 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 277 164 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 277 90 loadbang;
 #X obj 277 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
@@ -196,7 +196,7 @@
 #X connect 34 0 31 0;
 #X connect 34 1 31 1;
 #X connect 36 0 1 0;
-#X restore 357 33 pd Fraise;
+#X restore 357 56 pd Fraise;
 #X obj 20 94 channel 0 LED1;
 #X obj 20 144 channel 1 LED2;
 #X obj 20 194 channel 2 LED3;
@@ -215,4 +215,6 @@
 #X obj 327 144 channel 17 MOTOR2;
 #X obj 327 214 channel 18 FAN;
 #X obj 175 13 fruit/fruit 1 TTR1 1 firmware;
+#X obj 357 31 declare -path Fraise;
+#X obj 357 13 declare -stdpath Fraise;
 #X coords 0 0 0.00203252 0.00161812 280 45 0;
