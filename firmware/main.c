@@ -47,6 +47,10 @@ const unsigned int logTab[1024] = {
 #include "../logTab2.txt"
 };
 
+const unsigned int fanTab[256] = {
+#include "../fanTab2.txt"
+};
+
 t_delay mainDelay;
 
 unsigned char PERIOD=25;
@@ -110,7 +114,7 @@ void DMXtoParams()
 	} else if (phase == 17) {
 		DCMOTOR(D).Vars.PWMConsign = ((unsigned int)DMXSlaveGet(DMXchannels[17])) * 4U;
 	} else if (phase == 18) {
-		dimmerSet(0, ((unsigned int)DMXSlaveGet(DMXchannels[18])) * 256U);
+		dimmerSet(0, ((unsigned int)fanTab[DMXSlaveGet(DMXchannels[18])]) * 256U);
 	}
 	
 	phase++;
